@@ -3,7 +3,8 @@ document.getElementById('y').textContent = new Date().getFullYear();
 const root = document.documentElement, btn = document.getElementById('theme');
 try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
 btn.addEventListener('click', () => {
-  root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+  const cur = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  root.dataset.theme = cur === 'dark' ? 'light' : 'dark';
   try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
 });
 
