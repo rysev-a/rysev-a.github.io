@@ -1,0 +1,26 @@
+---
+ref: projects
+section: projects
+title: Все проекты
+---
+{%- assign projects = site.projects | where: "lang", page.lang | sort: "order" -%}
+<div class="hero-wrap">
+  <div class="side hatch"></div>
+  <div class="hero page-head">
+    <div class="hero-top">
+      <div class="kicker reveal">Проекты</div>
+      <h1 class="reveal">Все проекты</h1>
+      <p class="lead reveal">Всё, что я делаю, — со страницей о каждом проекте: что это, как устроено внутри и как попробовать.</p>
+    </div>
+    <div class="hero-end"></div>
+  </div>
+  <div class="side hatch"></div>
+</div>
+
+<section>
+  <div class="frame">
+    <div class="cells">
+      {%- for p in projects %}{% include project-card.html project=p %}{% endfor %}
+    </div>
+  </div>
+</section>

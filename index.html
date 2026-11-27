@@ -1,146 +1,87 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alexei Rysev — Full-stack developer</title>
-<link rel="alternate" hreflang="en" href="https://alexeirysev.dev/">
-<link rel="alternate" hreflang="ru" href="https://alexeirysev.dev/ru/">
-<meta name="description" content="Alexei Rysev — full-stack developer with 10+ years of experience. Frameworks, learning tools and developer tooling.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-  <nav class="frame">
-    <a href="#" class="logo"><i></i>Alexei Rysev</a>
-    <div class="links">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+---
+ref: home
+---
+{%- assign projects = site.projects | where: "lang", page.lang | sort: "order" -%}
+{%- assign posts = site.posts | where: "lang", page.lang -%}
+<div class="hero-wrap">
+  <div class="side hatch"></div>
+  <div class="hero">
+    <div class="hero-top">
+      <h1 class="reveal">Full-stack developer.<br>Frameworks, tools<br>&amp; <em>learning apps</em></h1>
+      <p class="lead reveal">I'm Alexei Rysev. For 10+ years I've built interactive web apps, admin panels and calculators — and now my own framework, a CS course and AI-assisted developer tooling.</p>
     </div>
-    <div class="tools">
-      <a href="ru/" class="lang" hreflang="ru" lang="ru" title="Русская версия">RU</a>
-      <button class="theme" id="theme" aria-label="Toggle color theme">◐</button>
-      <a class="btn sm primary header-cta" href="https://t.me/rysev_a" target="_blank" rel="noopener">Contact --&gt;</a>
+    <div class="facts reveal">
+      <span class="fact"><img src="/icons/api.svg" width="24" height="24" alt="">Frameworks &amp; APIs</span>
+      <span class="fact"><img src="/icons/letter-a-waves.svg" width="24" height="24" alt="">Learning apps</span>
+      <span class="fact"><img src="/icons/sparkles.svg" width="24" height="24" alt="">AI tooling</span>
     </div>
-  </nav>
-</header>
-
-<main>
-  <div class="hero-wrap">
-    <div class="side hatch"></div>
-    <div class="hero">
-      <div class="hero-top">
-        <h1 class="reveal">Full-stack developer.<br>Frameworks, tools<br>&amp; <em>learning apps</em></h1>
-        <p class="lead reveal">I'm Alexei Rysev. For 10+ years I've built interactive web apps, admin panels and calculators — and now my own framework, a CS course and AI-assisted developer tooling.</p>
-      </div>
-      <div class="facts reveal">
-        <span class="fact"><img src="icons/api.svg" width="24" height="24" alt="">Frameworks &amp; APIs</span>
-        <span class="fact"><img src="icons/letter-a-waves.svg" width="24" height="24" alt="">Learning apps</span>
-        <span class="fact"><img src="icons/sparkles.svg" width="24" height="24" alt="">AI tooling</span>
-      </div>
-      <div class="hero-cta reveal">
-        <a class="btn primary" href="#projects">See projects --&gt;</a>
-        <a class="btn" href="https://github.com/rysev-a" target="_blank" rel="noopener">GitHub</a>
-      </div>
-      <div class="hero-end"></div>
+    <div class="hero-cta reveal">
+      <a class="btn primary" href="/projects/">See projects --&gt;</a>
+      <a class="btn" href="https://github.com/rysev-a" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <div class="side hatch"></div>
+    <div class="hero-end"></div>
   </div>
+  <div class="side hatch"></div>
+</div>
 
-  <section id="projects">
-    <div class="frame">
-      <div class="section-head reveal">
-        <div class="kicker">Projects</div>
-        <h2>Selected work</h2>
-      </div>
-      <div class="cells">
-
-        <article class="cell project reveal">
-          <img src="icons/lightning.svg" width="48" height="48" alt="">
-          <div><h3>Pavlus</h3><div class="kind">Framework</div></div>
-          <p>An isomorphic web framework built around messages, effects and plugins. It has its own template compiler and Vite plugin, SSR, and a server runtime with http, ws, Postgres and Redis plugins. It also comes with a shadcn-based UI kit, a devtools panel and a Zed extension.</p>
-          <div class="tags"><span>TypeScript</span><span>SSR</span><span>Compiler</span><span>Vite</span></div>
-          <div class="p-links"><a href="https://github.com/rysev-a/pavlus" target="_blank" rel="noopener">Source --&gt;</a></div>
-        </article>
-
-        <article class="cell project reveal">
-          <img src="icons/activity-square.svg" width="48" height="48" alt="">
-          <div><h3>Learn Music</h3><div class="kind">Learning app</div></div>
-          <p>A browser app for learning to read sheet music. It renders the score, plays it back with a tempo you set, and checks what you play note by note. Exercises are built bar by bar from real pieces, like Carcassi's Op. 60.</p>
-          <div class="tags"><span>JavaScript</span><span>Web Audio</span><span>Notation</span></div>
-          <div class="p-links"><a href="https://github.com/rysev-a/learn-music" target="_blank" rel="noopener">Source --&gt;</a></div>
-        </article>
-
-        <article class="cell project reveal">
-          <img src="icons/chart-pie-two.svg" width="48" height="48" alt="">
-          <div><h3>CS.Core</h3><div class="kind">Education platform</div></div>
-          <p>An audio course on programming, "from zero to your own web service": 12 books and 316 chapters, from discrete maths and computer architecture to Rust, databases and system design. Each chapter has animated slides, quizzes, sandboxed code checks and interactive labs.</p>
-          <div class="tags"><span>Full-stack</span><span>Sandbox</span><span>Interactive labs</span></div>
-          <div class="p-links">
-            <a href="https://cs-core.tech" target="_blank" rel="noopener">Website --&gt;</a>
-            <a href="https://github.com/rysev-a/dev-learn" target="_blank" rel="noopener">Source --&gt;</a>
-          </div>
-        </article>
-
-        <article class="cell project reveal">
-          <img src="icons/sparkles.svg" width="48" height="48" alt="">
-          <div><h3>AI Comments</h3><div class="kind">Server + extension</div></div>
-          <p>Select an area of a page, write what to change, and an AI agent picks it up. It edits the code and reports progress back to the same page, live. Comments go through a kanban board (draft → sent → processing → done) with threaded replies. It runs on a server, with a browser extension.</p>
-          <div class="tags"><span>Vite plugin</span><span>Browser extension</span><span>Claude</span></div>
-          <div class="p-links"><a href="https://github.com/rysev-a/ai-comments" target="_blank" rel="noopener">Source --&gt;</a></div>
-        </article>
-
-      </div>
+<section id="projects">
+  <div class="frame">
+    <div class="section-head reveal">
+      <div class="kicker">Projects</div>
+      <h2>Selected work</h2>
     </div>
-  </section>
+    <div class="cells">
+      {%- for p in projects %}{% include project-card.html project=p %}{% endfor %}
+    </div>
+  </div>
+</section>
 
-  <section id="about">
-    <div class="frame">
-      <div class="section-head reveal">
-        <div class="kicker">About</div>
-        <h2>Ten years in the browser and behind it</h2>
-      </div>
-      <div class="about">
-        <div class="about-text reveal">
-          <p>I work across the whole stack: <strong>TypeScript and JavaScript</strong> on the front, <strong>Node.js, Python and Rust</strong> on the server, Postgres and Redis underneath, Docker to ship it.</p>
-          <p>I like to understand things from the ground up, so I write my own tools: a reactive framework with its own template compiler, a course on computer science from the transistor up to system design, and plugins that let an AI agent work through review comments left right on the page.</p>
-          <div class="skills">
-            <span>TypeScript</span><span>Node.js</span><span>Python</span><span>Rust</span><span>Postgres</span><span>Redis</span><span>Vite</span><span>SSR</span><span>Docker</span><span>Web Audio</span><span>AI agents</span>
-          </div>
-        </div>
-        <div class="stats reveal">
-          <div class="stat"><b>10+</b><span>years in development</span></div>
-          <div class="stat"><b>4</b><span>open-source projects</span></div>
-          <div class="stat"><b>12</b><span>books in CS.Core</span></div>
-          <div class="stat"><b>316</b><span>course chapters</span></div>
+<section id="blog">
+  <div class="frame">
+    <div class="section-head reveal">
+      <div class="kicker">Blog</div>
+      <h2>Latest posts</h2>
+    </div>
+    <div class="post-list">
+      {%- for post in posts limit: 3 %}{% include post-row.html post=post %}{% endfor %}
+    </div>
+    <div class="section-foot"><a class="btn" href="/blog/">All posts --&gt;</a></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="frame">
+    <div class="section-head reveal">
+      <div class="kicker">About</div>
+      <h2>Ten years in the browser and behind it</h2>
+    </div>
+    <div class="about">
+      <div class="about-text reveal">
+        <p>I work across the whole stack: <strong>TypeScript and JavaScript</strong> on the front, <strong>Node.js, Python and Rust</strong> on the server, Postgres and Redis underneath, Docker to ship it.</p>
+        <p>I like to understand things from the ground up, so I write my own tools: a reactive framework with its own template compiler, a course on computer science from the transistor up to system design, and plugins that let an AI agent work through review comments left right on the page.</p>
+        <div class="skills">
+          <span>TypeScript</span><span>Node.js</span><span>Python</span><span>Rust</span><span>Postgres</span><span>Redis</span><span>Vite</span><span>SSR</span><span>Docker</span><span>Web Audio</span><span>AI agents</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="contact" class="rule">
-    <div class="frame contact reveal">
-      <div class="kicker">Contact</div>
-      <h2>Let's build something</h2>
-      <p>Have a project, a question or an idea? Telegram is the fastest way to reach me.</p>
-      <div class="row">
-        <a class="btn primary" href="https://t.me/rysev_a" target="_blank" rel="noopener">Telegram --&gt;</a>
-        <a class="btn" href="https://vk.com/alexeirysev" target="_blank" rel="noopener">VK</a>
-        <a class="btn" href="https://github.com/rysev-a" target="_blank" rel="noopener">GitHub</a>
+      <div class="stats reveal">
+        <div class="stat"><b>10+</b><span>years in development</span></div>
+        <div class="stat"><b>{{ projects.size }}</b><span>open-source projects</span></div>
+        <div class="stat"><b>12</b><span>books in CS.Core</span></div>
+        <div class="stat"><b>316</b><span>course chapters</span></div>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
-<footer>
-  <div class="frame"><span>© <span id="y"></span> Alexei Rysev</span><span>alexeirysev.dev</span></div>
-</footer>
-
-<script src="main.js"></script>
-</body>
-</html>
+<section id="contact" class="rule">
+  <div class="frame contact reveal">
+    <div class="kicker">Contact</div>
+    <h2>Let's build something</h2>
+    <p>Have a project, a question or an idea? Telegram is the fastest way to reach me.</p>
+    <div class="row">
+      <a class="btn primary" href="https://t.me/rysev_a" target="_blank" rel="noopener">Telegram --&gt;</a>
+      <a class="btn" href="https://vk.com/alexeirysev" target="_blank" rel="noopener">VK</a>
+      <a class="btn" href="https://github.com/rysev-a" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>

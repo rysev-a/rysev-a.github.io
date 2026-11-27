@@ -1,0 +1,46 @@
+en:
+  base: /
+  name: Alexei Rysev
+  role: Full-stack developer
+  description: Alexei Rysev — full-stack developer with 10+ years of experience. Frameworks, learning tools and developer tooling.
+  nav_projects: Projects
+  nav_blog: Blog
+  nav_about: About
+  nav_contact: Contact
+  contact_cta: Contact
+  switch_label: RU
+  switch_title: Русская версия
+  theme_label: Toggle color theme
+  details: Details
+  source: Source
+  website: Website
+  all_projects: All projects
+  all_posts: All posts
+  read: Read
+  other_projects: Other projects
+  min_read: min read
+  date_format: "%b %-d, %Y"
+  no_posts: No posts yet.
+ru:
+  base: /ru/
+  name: Алексей Рысев
+  role: fullstack-разработчик
+  description: Алексей Рысев — fullstack-разработчик с опытом более 10 лет. Фреймворки, обучающие приложения и инструменты для разработчиков.
+  nav_projects: Проекты
+  nav_blog: Блог
+  nav_about: Обо мне
+  nav_contact: Контакты
+  contact_cta: Связаться
+  switch_label: EN
+  switch_title: English version
+  theme_label: Переключить тему
+  details: Подробнее
+  source: Исходный код
+  website: Сайт
+  all_projects: Все проекты
+  all_posts: Все записи
+  read: Читать
+  other_projects: Другие проекты
+  min_read: мин чтения
+  date_format: "%d.%m.%Y"
+  no_posts: Записей пока нет.

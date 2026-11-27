@@ -1,0 +1,34 @@
+title: Alexei Rysev
+url: https://alexeirysev.dev
+baseurl: ""
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
+
+# English posts live in _posts, Russian ones in ru/_posts (their category becomes "ru"),
+# so posts are served at /blog/<title>/ and /ru/blog/<title>/.
+permalink: /:categories/blog/:title/
+
+collections:
+  projects:
+    output: true
+
+defaults:
+  - scope: { path: "" }
+    values: { lang: en, layout: default }
+  - scope: { path: "ru" }
+    values: { lang: ru }
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "ru", type: posts }
+    values: { layout: post, lang: ru }
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
