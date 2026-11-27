@@ -1,0 +1,11 @@
+{%- assign t = site.data.i18n[include.post.lang] -%}
+{%- assign words = include.post.content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 180 | at_least: 1 -%}
+<a class="post-row reveal" href="{{ include.post.url }}">
+  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: t.date_format }}</time>
+  <span class="post-main">
+    <b>{{ include.post.title }}</b>
+    <span>{{ include.post.description | default: include.post.excerpt | strip_html | strip_newlines | truncate: 180 }}</span>
+  </span>
+  <span class="post-meta">{{ minutes }} {{ t.min_read }} --&gt;</span>
+</a>

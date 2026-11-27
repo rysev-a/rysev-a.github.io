@@ -1,0 +1,31 @@
+---
+layout: default
+section: blog
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 180 | at_least: 1 -%}
+<div class="hero-wrap">
+  <div class="side hatch"></div>
+  <div class="hero page-head">
+    <div class="hero-top">
+      <div class="crumbs reveal"><a href="{{ t.base }}blog/">{{ t.nav_blog }}</a> / <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: t.date_format }}</time> · {{ minutes }} {{ t.min_read }}</div>
+      <h1 class="reveal post-title">{{ page.title }}</h1>
+      {%- if page.description %}<p class="lead reveal">{{ page.description }}</p>{% endif %}
+    </div>
+    <div class="hero-end"></div>
+  </div>
+  <div class="side hatch"></div>
+</div>
+
+<section>
+  <div class="frame">
+    <article class="prose reveal">
+{{ content }}
+    </article>
+    <div class="post-foot">
+      <a class="btn" href="{{ t.base }}blog/">&lt;-- {{ t.all_posts }}</a>
+      <a class="btn primary" href="https://t.me/rysev_a" target="_blank" rel="noopener">Telegram --&gt;</a>
+    </div>
+  </div>
+</section>

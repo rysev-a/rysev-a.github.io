@@ -1,0 +1,13 @@
+{%- assign t = site.data.i18n[include.project.lang] -%}
+<article class="cell project reveal">
+  <img src="/icons/{{ include.project.icon }}.svg" width="48" height="48" alt="">
+  <div><h3><a href="{{ include.project.url }}">{{ include.project.title }}</a></h3><div class="kind">{{ include.project.kind }}</div></div>
+  <p>{{ include.project.summary }}</p>
+  <div class="tags">{% for tag in include.project.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+  <div class="p-links">
+    <a href="{{ include.project.url }}">{{ t.details }} --&gt;</a>
+    {%- for link in include.project.links %}
+    <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} ↗</a>
+    {%- endfor %}
+  </div>
+</article>

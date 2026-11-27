@@ -1,0 +1,27 @@
+---
+ref: blog
+section: blog
+title: Blog
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign posts = site.posts | where: "lang", page.lang -%}
+<div class="hero-wrap">
+  <div class="side hatch"></div>
+  <div class="hero page-head">
+    <div class="hero-top">
+      <div class="kicker reveal">Blog</div>
+      <h1 class="reveal">Notes from building things</h1>
+      <p class="lead reveal">How my projects are made: decisions, mistakes and what I learned along the way.</p>
+    </div>
+    <div class="hero-end"></div>
+  </div>
+  <div class="side hatch"></div>
+</div>
+
+<section>
+  <div class="frame">
+    <div class="post-list">
+      {%- for post in posts %}{% include post-row.html post=post %}{% else %}<p class="empty">{{ t.no_posts }}</p>{% endfor %}
+    </div>
+  </div>
+</section>

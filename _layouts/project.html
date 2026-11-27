@@ -1,0 +1,52 @@
+---
+layout: default
+section: projects
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+<div class="hero-wrap">
+  <div class="side hatch"></div>
+  <div class="hero page-head">
+    <div class="hero-top">
+      <div class="crumbs reveal"><a href="{{ t.base }}projects/">{{ t.nav_projects }}</a> / <span>{{ page.title }}</span></div>
+      <img class="page-icon reveal" src="/icons/{{ page.icon }}.svg" width="48" height="48" alt="">
+      <h1 class="reveal">{{ page.title }}</h1>
+      <div class="kind reveal">{{ page.kind }}</div>
+      <p class="lead reveal">{{ page.summary }}</p>
+    </div>
+    <div class="facts reveal">{% for tag in page.tags %}<span class="fact chip">{{ tag }}</span>{% endfor %}</div>
+    <div class="hero-cta reveal">
+      {%- for link in page.links %}
+      <a class="btn{% if forloop.first %} primary{% endif %}" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} --&gt;</a>
+      {%- endfor %}
+    </div>
+    <div class="hero-end"></div>
+  </div>
+  <div class="side hatch"></div>
+</div>
+
+<section>
+  <div class="frame">
+    <article class="prose reveal">
+{{ content }}
+    </article>
+  </div>
+</section>
+
+{%- assign others = site.projects | where: "lang", page.lang | where_exp: "p", "p.ref != page.ref" | sort: "order" %}
+<section class="rule">
+  <div class="frame">
+    <div class="section-head reveal">
+      <div class="kicker">{{ t.nav_projects }}</div>
+      <h2>{{ t.other_projects }}</h2>
+    </div>
+    <div class="cells three">
+      {%- for p in others %}
+      <a class="cell mini reveal" href="{{ p.url }}">
+        <img src="/icons/{{ p.icon }}.svg" width="48" height="48" alt="">
+        <b>{{ p.title }}</b>
+        <span class="kind">{{ p.kind }}</span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

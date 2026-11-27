@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="music-notes" fill="#F97316">
+<path d="M17 10.6 41 5v7.2L17 17.8z"/>
+<rect x="17" y="12" width="3.6" height="23.5"/>
+<rect x="37.4" y="7" width="3.6" height="23.5"/>
+<ellipse cx="13.6" cy="35.6" rx="7" ry="5.3" transform="rotate(-20 13.6 35.6)"/>
+<ellipse cx="34" cy="30.6" rx="7" ry="5.3" transform="rotate(-20 34 30.6)"/>
+</g>
+</svg>
