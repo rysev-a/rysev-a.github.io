@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алексей Рысев — fullstack-разработчик</title>
+<link rel="alternate" hreflang="en" href="https://rysev-a.github.io/">
+<link rel="alternate" hreflang="ru" href="https://rysev-a.github.io/ru/">
+<meta name="description" content="Алексей Рысев — fullstack-разработчик с опытом более 10 лет. Фреймворки, обучающие приложения и инструменты для разработчиков.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#" class="logo mono">rysev<span>.</span>a</a>
+    <div class="links">
+      <a href="#about" class="hide-sm">Обо мне</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакты</a>
+      <a href="../" class="lang mono" hreflang="en" lang="en" title="English version">EN</a>
+      <button class="theme" id="theme" aria-label="Переключить тему">◐</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="tag reveal"><i class="dot"></i> Открыт для интересных проектов</span>
+    <h1 class="reveal">Привет, я Алексей.<br>Я создаю <em>фреймворки, инструменты и обучающие приложения</em>.</h1>
+    <p class="lead reveal">Fullstack-разработчик с опытом более 10 лет. Делаю интерактивные веб-приложения, админ-панели и онлайн-калькуляторы, а в последнее время — собственный фреймворк, образовательные платформы и инструменты для разработки с ИИ.</p>
+    <div class="cta reveal">
+      <a class="btn primary" href="#projects">Мои проекты ↓</a>
+      <a class="btn" href="https://github.com/rysev-a" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://t.me/rysev_a" target="_blank" rel="noopener">Telegram ↗</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="reveal">
+        <div class="label mono">// обо мне</div>
+        <h2>Десять лет делаю то, что работает в браузере и за ним.</h2>
+        <p>Работаю на всём стеке: <strong>TypeScript и JavaScript</strong> на фронтенде, <strong>Node.js, Python и Rust</strong> на сервере, под ними Postgres и Redis, а доставляю всё в Docker.</p>
+        <p>Люблю разбираться в вещах с самого основания, поэтому пишу свои инструменты: реактивный фреймворк с собственным компилятором шаблонов, курс по информатике — от транзистора до проектирования систем, и плагины, с которыми ИИ-агент сам отрабатывает замечания, оставленные прямо на странице.</p>
+        <div class="skills">
+          <span>TypeScript</span><span>Node.js</span><span>Python</span><span>Rust</span><span>Postgres</span><span>Redis</span><span>Vite</span><span>SSR</span><span>Docker</span><span>Web Audio</span><span>ИИ-агенты</span>
+        </div>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b>10+</b><span>лет в разработке</span></div>
+        <div class="stat"><b>4</b><span>open-source проекта</span></div>
+        <div class="stat"><b>12</b><span>книг в CS.Core</span></div>
+        <div class="stat"><b>316</b><span>глав курса</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="label mono reveal">// проекты</div>
+      <h2 class="reveal">Избранные работы</h2>
+      <div class="projects">
+
+        <article class="project reveal">
+          <div class="p-head"><div class="icon">◆</div><span class="kind mono">фреймворк</span></div>
+          <h3>Pavlus</h3>
+          <p>Изоморфный веб-фреймворк на сообщениях, эффектах и плагинах. Собственный компилятор шаблонов и плагин для Vite, SSR, серверный рантайм с плагинами http, ws, Postgres и Redis. В комплекте — UI-кит на основе shadcn, панель отладки и расширение для Zed.</p>
+          <div class="tags"><span>TypeScript</span><span>SSR</span><span>Компилятор</span><span>Vite</span></div>
+          <div class="p-links"><a href="https://github.com/rysev-a/pavlus" target="_blank" rel="noopener">Исходный код ↗</a></div>
+        </article>
+
+        <article class="project reveal">
+          <div class="p-head"><div class="icon">♪</div><span class="kind mono">обучающее приложение</span></div>
+          <h3>Learn Music</h3>
+          <p>Браузерное приложение, чтобы научиться читать ноты. Показывает партитуру, проигрывает её в выбранном темпе и проверяет сыгранное нота за нотой. Упражнения собраны по тактам из настоящих произведений, например из op. 60 Каркасси.</p>
+          <div class="tags"><span>JavaScript</span><span>Web Audio</span><span>Нотная запись</span></div>
+          <div class="p-links"><a href="https://github.com/rysev-a/learn-music" target="_blank" rel="noopener">Исходный код ↗</a></div>
+        </article>
+
+        <article class="project reveal">
+          <div class="p-head"><div class="icon">⌘</div><span class="kind mono">образовательная платформа</span></div>
+          <h3>CS.Core</h3>
+          <p>Аудиокурс по программированию «с нуля до своего веб-сервиса»: 12 книг и 316 глав — от дискретной математики и архитектуры компьютера до Rust, баз данных и проектирования систем. В каждой главе — анимированные слайды, тесты, проверка кода в песочнице и интерактивные лабораторные.</p>
+          <div class="tags"><span>Fullstack</span><span>Песочница</span><span>Интерактивные лабы</span></div>
+          <div class="p-links">
+            <a href="https://cs-core.tech" target="_blank" rel="noopener">Сайт ↗</a>
+            <a href="https://github.com/rysev-a/dev-learn" target="_blank" rel="noopener">Исходный код ↗</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="p-head"><div class="icon">✎</div><span class="kind mono">сервер + расширение</span></div>
+          <h3>AI Comments</h3>
+          <p>Выделите область страницы, напишите, что поменять, — и ИИ-агент возьмёт задачу в работу: изменит код и будет в реальном времени сообщать о прогрессе на той же странице. Комментарии проходят через канбан-доску (черновик → отправлен → в работе → готово) и обсуждаются в ветках. Работает как сервер и расширение для браузера.</p>
+          <div class="tags"><span>Плагин Vite</span><span>Расширение браузера</span><span>Claude</span></div>
+          <div class="p-links"><a href="https://github.com/rysev-a/ai-comments" target="_blank" rel="noopener">Исходный код ↗</a></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap reveal">
+      <div class="label mono">// контакты</div>
+      <h2>Давайте сделаем что-нибудь вместе.</h2>
+      <p>Есть проект, вопрос или идея? Быстрее всего со мной можно связаться в Telegram.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://t.me/rysev_a" target="_blank" rel="noopener">Telegram ↗</a>
+        <a class="btn" href="https://vk.com/alexeirysev" target="_blank" rel="noopener">ВКонтакте ↗</a>
+        <a class="btn" href="https://github.com/rysev-a" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap mono"><span>© <span id="y"></span> Алексей Рысев</span><span>rysev-a.github.io</span></div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>
